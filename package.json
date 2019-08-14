@@ -9,17 +9,84 @@
 	"categories": [
 		"Other"
 	],
+	"icon": "images/icon.png",
 	"activationEvents": [
 		"onCommand:extension.helloWorld"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
+		"configuration": [
+			{
+				"title": "dev-helper",
+				"properties": {
+					"dev-helper.yourName": {
+						"type": "string",
+						"default": "abc",
+						"description": "测试配置用"
+					}
+				}
+			}
+		],
 		"commands": [
 			{
 				"command": "extension.helloWorld",
 				"title": "Hello World"
 			}
-		]
+		],
+		"keybindings": [
+			{
+				"command": "extension.helloWorld",
+				"key": "ctrl+f10",
+				"mac": "cmd+f10",
+				"when": "editorTextFocus"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"when": "editorFocus",
+					"command": "extension.helloWorld",
+					"group": "navigation"
+				}
+			]
+		},
+		"viewsContainers": {
+			"activitybar": [
+				{
+					"id": "beautifulGirl",
+					"title": "测试分类",
+					"icon": "images/Function.svg"
+				}
+			]
+		},
+		"views": {
+			"beautifulGirl": [
+				{
+					"id": "test_1",
+					"name": "测试1"
+				},
+				{
+					"id": "test_2",
+					"name": "测试2"
+				},
+				{
+					"id": "test_3",
+					"name": "测试3"
+				},
+				{
+					"id": "test_4",
+					"name": "测试4"
+				},
+				{
+					"id": "test_5",
+					"name": "测试5"
+				},
+				{
+					"id": "test_6",
+					"name": "测试6"
+				}
+			]
+		}
 	},
 	"scripts": {
 		"vscode:prepublish": "npm run compile",

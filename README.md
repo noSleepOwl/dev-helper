@@ -1,12 +1,10 @@
 # dev-helper README
 
-This is the README for your extension "dev-helper". After writing up a brief description, we recommend including the following sections.
+vscode 用来写java不怎么理想,还是idea比较合适,但是vscode的插件功能还是值得尝试的,只是个人兴趣,想到什么功能做什么功能,可能到最后什么功能都没有.
 
 ## Features
+1. javabean builder 用来生成javabean的builder功能
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
-
-For example if there is an image subfolder under your extension project workspace:
 
 \!\[feature X\]\(images/feature-x.png\)
 

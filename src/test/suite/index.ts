@@ -1,7 +1,8 @@
 import * as path from 'path';
 import * as Mocha from 'mocha';
 import * as glob from 'glob';
-
+import { Tools } from '../../tools/Tools'
+import { Config } from '../../tools/Const'
 export function run(): Promise<void> {
 	// Create the mocha test
 	const mocha = new Mocha({
@@ -35,3 +36,14 @@ export function run(): Promise<void> {
 		});
 	});
 }
+
+// 解构
+let arr = ["name", 'age', 'gets']
+let arrParse = Tools.printf('my %s my %s my %s', ...arr);
+// 一般调用
+console.log(arrParse);
+let res = Tools.printf('hello %s %s', "person", 'name');
+
+console.log(res, '\N SUCCESS ...');
+
+console.log(Config.packageConfig);

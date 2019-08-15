@@ -1,11 +1,11 @@
 
 
-import packageJson from '../../package.json'
+// import packageJson from '../../package.json'
 
 
 
 export namespace Config {
-    export const packageConfig = packageJson;
+    export const packageConfig = '';
     export const msg = {
         
     }

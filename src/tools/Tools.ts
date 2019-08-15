@@ -12,7 +12,6 @@ export namespace Tools {
             flag: boolean = true;
         temp = temp.replace(/%s/g, function () {
             let arg = args[i++];
-
             if (typeof arg !== 'string') {
                 flag = false;
                 return EMPTY_STR;
@@ -24,5 +23,4 @@ export namespace Tools {
     export function showMsg(msg: string) {
         window.showInformationMessage(msg);
     }
-
 }
